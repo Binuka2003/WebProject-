@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Add this line */
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    color: #333;
+}
+
+/*navbar starts here*/
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    background-color: #fff;
+    gap: 20px; 
+}
+
+.navbar a.active {
+    background-color: #0098FF;
+    color: white;
+}
+
+.navbar .logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 40px;
+}
+
+.navbar .nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;  /* Ensures no bullet points */
+    font-weight:bold;
+}
+
+.navbar .nav-links li{
+    margin: 0px 10px;  /* Adds space between items */
+}
+
+.navbar .nav-links a{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.navbar .nav-links a:hover{
+    background-color: #f1f1f1;  /* Adds a hover effect */
+    border-radius: 25px;
+}
+
+.navbar .nav-links .btn-signin:hover {
+    background-color: #0098FF;  /* Adds a hover effect */
+    border-radius: 25px;
+}
+
+.navbar .btn-signin{
+    display: flex;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/*hero starts here*/
+
+.hero {
+    display: flex;
+    padding: 100px 70px;
+    background-color: #f8f8f8;
+    position: relative; /* Add this line */
+}
+
+.hero-content h1{
+    font-size: 48px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.hero-content h1 span{
+    color: #0098FF;
+}
+
+.hero-content p{
+    margin: 10px 0px 40px;
+    font-size: 18px;
+    color: #777;
+}
+
+.hero-content p span{
+    color: #0098FF;
+}
+
+.hero-buttons {
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically align items */
+}
+
+.hero-buttons .btn{
+    padding: 15px 15px;
+    background-color: #0098FF;
+    color: #fff;
+    border: none;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.hero-buttons .btn-outline{
+    position: relative;
+    padding: 15px 30px;
+    left: 10px;
+    border: 2px solid #0098FF;
+    background-color: transparent;
+    color: #0098FF;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero-buttons .btn:hover, .btn-outline:hover{
+    box-shadow:0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    max-width: 25%;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    right: 100px; /* Adjust as needed */
+}
+
+.hero-buttons .rating {
+    display: flex; /* Enable Flexbox for the rating */
+    align-items: center; /* Vertically align star and number */
+}
+
+.hero-buttons .rating .star {
+    color: gold;
+    margin-right: 5px;
+}
+
+/*SSM Features*/
+
+.SSM-Features{
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
+}
+
+.SSM-Features h2{
+    font-size: 32px;
+    color: #333;
+}
+
+.SSM-Features p{
+    margin: 20px 0;
+    font-size: 18px;
+    color: #777;
+}
+
+.SSM-Features h2 span{
+    color: #0098FF;
+}
+
+.features{
+    display: flex;
+    justify-content:center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature{
+    text-align: center;
+    width: 300px;
+    padding: 20px ;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3 ease;
+    margin: 0 20px;
+}
+
+.feature hover{
+    transform: translateY(-10px);
+}
+
+.feature img{
+    width: 100px;
+    height: 100px;
+}
+
+.feature h3{
+    margin: 20px 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.feature p{
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* Login and Signup Page Styles */
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes it take full viewport height */
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: Adjust background */
+}
+
+.login-container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #f1f1f1;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #333; /* Or #000 for black */
+    font-size: 30px; /* Adjust as needed */
+    margin-bottom: 20px;
+    font-weight: 600; /* Optional: Adjust font weight */
+}
+
+.login-form .input-box {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.login-form select {
+    background-color: #fff;
+    appearance: none;
+}
+
+.login-form input[type="submit"] {
+    background-color: #0098FF;
+    color: #fff; /* Ensure white text */
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 18px;
+    font-weight: 600; /* Make the text semi-bold */
+    font-size: 16px; /* Adjust as needed */
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #007ACC;
+}
+
+/* Message Styles */
+.login-form p {
+    text-align: center;
+    color: #333;
+    margin-top: 15px;
+}
+
+.signup-link {
+    color: #0098FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.contact-page-content {
+    padding-top: 50px; /* Add space between header and form */
+    padding-bottom: 50px; /* Add space between form and footer if there is one */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    width: 100%; /* Take full width */
+}
+
+
+/*new footer*/
+
+footer {
+    padding: 30px 0 0;
+    background-color: #121212;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.footer-left {
+    max-width: 50%;
+}
+
+.footer-left h3{
+    color: #0098FF;
+}
+
+.footer-left p {
+    color: #f1f1f1;
+    margin: 8px 0 60px;
+}
+
+.email-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h3 {
+    color: #0098FF;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 20px;
+}
+
+.footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #181818;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+
+/*About Us*/ /*TeamStyles*/
+
+.team-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.team-member {
+    text-align: center;
+    margin: 0 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px; /* Adjust as needed */
+    display: flex; /*Enable flexbox*/
+    flex-direction: column; /*Stack items vertically*/
+}
+
+.team-member h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Stats Section Styles */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+}
+
+.stats-text {
+    flex: 1; /* Take up available space */
+    padding-right: 40px; /* Add space between text and stats */
+}
+
+.stats-text h2 {
+    font-size: 2.5em; /* Adjust as needed */
+    line-height: 1.2;
+    color: #333;
+    font-weight: 600; /* Adjust as needed */
+}
+
+.stats-text h2 span{
+    color: #0098FF;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex: 2; /* Take up more space */
+}
+
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.5em; /* Adjust as needed */
+    font-weight: 600; /* Adjust as needed */
+    color: #333;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8em; /* Adjust as needed */
+    color: #777;
+}
+
+
+/*Contact us*/
+
+.cotactus {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if needed) */
+    margin-top: 30px;
+    background-color: #f8f8f8;
+    position: relative;
+    text-align: center; /* Center text within the content */
+}
+
+.contactus-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.contactus-content p {
+    margin: 10px 0px 20px;
+    font-size: 18px;
+    color: #777;
+}
+
+.contactus-content span {
+    color: #0098FF;
+}
+
+
+.contact-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card a{
+    color: #0098FF;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0098FF;
+}
